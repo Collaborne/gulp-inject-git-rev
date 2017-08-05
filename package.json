@@ -16,14 +16,12 @@
     "url": "https://github.com/Collaborne/gulp-inject-git-rev/issues"
   },
   "homepage": "https://github.com/Collaborne/gulp-inject-git-rev#readme",
-  "dependencies": {
+  "devDependencies": {
     "git-rev": "^0.2.1",
     "gulp": "^3.9.1",
     "gulp-replace": "^0.6.1",
     "gulp-size": "^2.1.0",
     "lazypipe": "^1.0.1"
-  },
-  "devDependencies": {
     "mocha": "^3.2.0",
     "rewire": "^2.5.2",
     "should": "^11.2.0"
