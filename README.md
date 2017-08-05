@@ -30,7 +30,7 @@ Finally, add the plugin to your gulpfile.js:
 ```
 const injectGitRev = require('gulp-inject-git-rev');
 
-gulp.task('default', function() {
+gulp.task('default', ['fetch-git-rev'], function() {
   return gulp.src('src/**/*')
     .pipe(injectGitRev())
     .pipe(gulp.dest('dist'));
