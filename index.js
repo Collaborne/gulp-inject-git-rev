@@ -12,10 +12,10 @@ const size = require('gulp-size');
  * This task needs to be executed before using `injectGitRev` in a pipe().
  * Solution suggested by http://mcranston18.github.io/gulp-piping/
  */
-let gitRev;
+let _gitRev;
 gulp.task('fetch-git-rev', function(cb) {
-	git.short(function(aGitRev) {
-		gitRev = aGitRev;
+	git.short(function(gitRev) {
+		_gitRev = gitRev;
 		cb();
 	});
 });
@@ -27,13 +27,13 @@ gulp.task('fetch-git-rev', function(cb) {
  * @returns {Function}
  */
 function injectGitRev() {
-	if (!gitRev) {
+	if (!_gitRev) {
 		throw new Error('GitRev isn\'t set. Execute task "fetch-git-rev" before using this function.');
 	}
 
-	return replace('%%GULP.GIT_REV_VERSION%%', gitRev);
+	return replace('%%GULP.GIT_REV_VERSION%%', _gitRev);
 };
 
 module.exports = lazypipe()
-		.pipe(injectGitRev)
-		.pipe(() => size({title: 'inject-git-rev'}));
+	.pipe(injectGitRev)
+	.pipe(() => size({title: 'inject-git-rev'}));
