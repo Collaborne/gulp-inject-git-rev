@@ -15,7 +15,7 @@ Add the placeholder to any of your files, e.g.:
 <html>
 	<head>
 		<script>
-			window.REV_VERSION = "%%GULP.GIT_REV_VERSION%%";
+			window.REV_VERSION = '%%GULP.GIT_REV_VERSION%%';
 			console.log(`This is revision ${window.REV_VERSION}.`);
 		</script>
 	</head>
