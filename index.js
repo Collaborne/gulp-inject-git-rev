@@ -2,6 +2,7 @@
 
 const git = require('git-rev');
 const gulp = require('gulp');
+const gulpIf = require('gulp-if');
 const lazypipe = require('lazypipe');
 const replace = require('gulp-replace');
 const size = require('gulp-size');
@@ -35,5 +36,6 @@ function injectGitRev() {
 };
 
 module.exports = lazypipe()
-	.pipe(injectGitRev)
+	// Inject git revision only in HTML and JS files
+	.pipe(() => gulpIf(/.*\.(html|js)$/, injectGitRev()))
 	.pipe(() => size({title: 'inject-git-rev'}));
