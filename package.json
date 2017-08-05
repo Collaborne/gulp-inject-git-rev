@@ -1,0 +1,26 @@
+{
+  "name": "gulp-inject-git-rev",
+  "version": "1.0.0",
+  "description": "Gulp plugin to inject the git revision number",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Collaborne/gulp-inject-git-rev.git"
+  },
+  "author": "Ronny Roeller <ronny@collaborne.com> (Collaborne)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Collaborne/gulp-inject-git-rev/issues"
+  },
+  "homepage": "https://github.com/Collaborne/gulp-inject-git-rev#readme",
+  "dependencies": {
+    "git-rev": "^0.2.1",
+    "gulp": "^3.9.1",
+    "gulp-replace": "^0.6.1",
+    "gulp-size": "^2.1.0",
+    "lazypipe": "^1.0.1"
+  }
+}
