@@ -1,6 +1,6 @@
 {
   "name": "gulp-inject-git-rev",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Gulp plugin to inject the git revision number",
   "main": "index.js",
   "scripts": {
