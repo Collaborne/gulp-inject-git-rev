@@ -9,7 +9,7 @@ Install the plugin:
 npm install gulp-inject-git-rev --save
 ```
 
-Add the placeholder to any of your files, e.g.:
+Add the `%%GULP.GIT_REV_VERSION%%` placeholder to any of your files, e.g.:
 
 ```
 <html>
