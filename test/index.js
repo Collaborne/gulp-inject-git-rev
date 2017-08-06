@@ -6,10 +6,11 @@ const injectGitRev = require('../');
 const fs = require('fs');
 const git = require('git-rev');
 const gulp = require('gulp');
+const path = require('path');
 const should = require('should');
 const File = require('vinyl');
 
-const FIXTURE_PAGE = fs.readFileSync('test/fixtures/page.html');
+const FIXTURE_PAGE = fs.readFileSync(path.join(__dirname, 'fixtures/page.html'));
 
 describe('gulp-inject-git-rev', function() {
 
@@ -19,7 +20,7 @@ describe('gulp-inject-git-rev', function() {
 		const files = [
 			new File({
 				path: 'simple.html',
-				contents: fs.readFileSync('test/fixtures/simple.html')
+				contents: fs.readFileSync(path.join(__dirname, 'fixtures/simple.html'))
 			}),
 			new File({
 				path: 'page.html',
