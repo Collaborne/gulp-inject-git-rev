@@ -1,6 +1,4 @@
-# gulp-inject-git-rev
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/Collaborne/gulp-inject-git-rev.svg)](https://greenkeeper.io/)
+# gulp-inject-git-rev [![Build Status](https://travis-ci.org/Collaborne/gulp-inject-git-rev.svg?branch=master)](https://travis-ci.org/Collaborne/gulp-inject-git-rev) [![Greenkeeper badge](https://badges.greenkeeper.io/Collaborne/gulp-inject-git-rev.svg)](https://greenkeeper.io/)
 Gulp plugin to inject the git revision number
 
 ## Usage
